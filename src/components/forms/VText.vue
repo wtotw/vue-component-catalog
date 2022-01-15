@@ -1,5 +1,5 @@
 <template>
-  <input v-model="value" type="text" class="v-text" />
+  <input v-model="value" v-bind="$attrs" type="text" class="v-text" />
 </template>
 
 <script lang="ts">
@@ -29,5 +29,9 @@ export default defineComponent({
 <style lang="scss" scoped>
 .v-text {
   font-size: 16px;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 </style>
