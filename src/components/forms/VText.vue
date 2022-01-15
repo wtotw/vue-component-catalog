@@ -1,5 +1,9 @@
 <template>
-  <input type="text" class="v-text" v-model="value" />
+  <input
+    v-model="value"
+    type="text"
+    class="v-text"
+  >
 </template>
 
 <script lang="ts">
@@ -7,8 +11,12 @@ import { computed, defineComponent } from 'vue'
 
 export default defineComponent({
   props: {
-    modelValue: String,
+    modelValue: {
+      type: String,
+      default: undefined,
+    },
   },
+  emits: ['update:modelValue'],
   setup(props, context) {
     const value = computed({
       get: () => props.modelValue,
