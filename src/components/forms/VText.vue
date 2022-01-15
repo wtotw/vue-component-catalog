@@ -1,25 +1,21 @@
 <template>
-  <input type="text" class="v-text" v-model="model" />
+  <input type="text" class="v-text" v-model="value" />
 </template>
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 
 export default defineComponent({
-  model: {
-    prop: 'value',
-    event: 'input',
-  },
   props: {
-    value: String,
+    modelValue: String,
   },
   setup(props, context) {
-    const model = computed({
-      get: () => props.value,
-      set: (value: string | undefined) => { context.emit('input', value) },
+    const value = computed({
+      get: () => props.modelValue,
+      set: (value: string | undefined) => { context.emit('update:modelValue', value) },
     })
 
-    return { model }
+    return { value }
   },
 })
 </script>
