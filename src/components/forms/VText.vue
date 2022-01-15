@@ -1,5 +1,5 @@
 <template>
-  <input type="text" v-model="model">
+  <input type="text" class="v-text" v-model="model" />
 </template>
 
 <script lang="ts">
@@ -23,3 +23,9 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.v-text {
+  font-size: 16px;
+}
+</style>
