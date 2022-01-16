@@ -28,8 +28,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .v-text {
-  font-size: 16px;
   display: block;
+  font-size: 16px;
 
   &:disabled {
     cursor: not-allowed;

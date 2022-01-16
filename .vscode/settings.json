@@ -3,5 +3,7 @@
       "source.fixAll.eslint": true,
       "source.fixAll.stylelint": true
   },
+  "stylelint.validate":["vue"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderWhitespace": "all",
 }
