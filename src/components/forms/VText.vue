@@ -1,5 +1,5 @@
 <template>
-  <input v-model="value" v-bind="$attrs" type="text" class="v-text" />
+  <input v-model="value" v-bind="$attrs" :type="type" class="v-text" />
 </template>
 
 <script lang="ts">
@@ -7,8 +7,14 @@ import { computed, defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
+    type: {
+      type: String,
+      required: false,
+      default: 'text',
+    },
     modelValue: {
       type: String,
+      required: false,
       default: undefined,
     },
   },
@@ -28,7 +34,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .v-text {
-  display: block;
   font-size: 16px;
 
   &:disabled {
