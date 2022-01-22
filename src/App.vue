@@ -6,29 +6,22 @@ import VText from '@/components/forms/VText.vue';
 import { ref } from 'vue';
 
 const text = ref('テキスト');
-const type = ref('text');
 </script>
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-
-  <VText v-model="text" :type="type" />
-  <select v-model="type">
-    <option value="text">text</option>
-    <option value="number">number</option>
-    <option value="password">password</option>
-  </select>
+  <VText v-model="text" />
   <p>{{ text }}</p>
 </template>
 
 <style>
 #app {
-  margin-top: 60px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
