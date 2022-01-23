@@ -1,5 +1,5 @@
 import { shallowMount, VueWrapper } from '@vue/test-utils';
-import VTextarea from '@/components/forms/VTextarea.vue';
+import VTextarea from '@/components/form/VTextarea.vue';
 
 describe('VTextarea', () => {
   let wrapper: VueWrapper;

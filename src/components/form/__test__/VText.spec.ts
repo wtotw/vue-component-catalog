@@ -1,5 +1,5 @@
 import { shallowMount, VueWrapper } from '@vue/test-utils';
-import VText from '@/components/forms/VText.vue';
+import VText from '@/components/form/VText.vue';
 
 describe('VText', () => {
   let wrapper: VueWrapper;

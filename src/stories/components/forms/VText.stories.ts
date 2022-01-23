@@ -1,5 +1,5 @@
 import { ArgTypes, Meta, Story } from '@storybook/vue3';
-import VText from '@/components/forms/VText.vue';
+import VText from '@/components/form/VText.vue';
 import { ref } from 'vue';
 
 export default {
