@@ -1,5 +1,5 @@
 <template>
-  <textarea v-model="value" v-bind="$attrs" class="v-textarea"></textarea>
+  <textarea v-model="model" v-bind="$attrs" class="v-textarea"></textarea>
 </template>
 
 <script lang="ts">
@@ -15,14 +15,14 @@ export default defineComponent({
   },
   emits: ['update:modelValue'],
   setup(props, context) {
-    const value = computed({
+    const model = computed({
       get: () => props.modelValue,
       set: (value: string | undefined) => {
         context.emit('update:modelValue', value);
       },
     });
 
-    return { value };
+    return { model };
   },
 });
 </script>

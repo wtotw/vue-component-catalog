@@ -1,5 +1,5 @@
 <template>
-  <input v-model="value" v-bind="$attrs" :type="type" class="v-text" />
+  <input v-model="model" v-bind="$attrs" :type="type" class="v-text" />
 </template>
 
 <script lang="ts">
@@ -20,14 +20,14 @@ export default defineComponent({
   },
   emits: ['update:modelValue'],
   setup(props, context) {
-    const value = computed({
+    const model = computed({
       get: () => props.modelValue,
       set: (value: string | undefined) => {
         context.emit('update:modelValue', value);
       },
     });
 
-    return { value };
+    return { model };
   },
 });
 </script>
