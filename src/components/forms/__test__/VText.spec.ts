@@ -36,10 +36,11 @@ describe('VText', () => {
     expect(input.attributes().disabled).toBe('');
   });
 
-  // FIXME: setup関数内のcomputedをテスト
   test('値が変更できること', async () => {
-    // expect(wrapper.vm.$data).toBe('');
-    // await wrapper.setProps({ modelValue: 'テキスト' });
-    // expect(wrapper.vm.value).toBe('テキスト');
+    const input = wrapper.find('.v-text');
+    await input.setValue('テキスト');
+    expect((wrapper.emitted() as any)['update:modelValue'][0][0]).toBe(
+      'テキスト'
+    );
   });
 });
