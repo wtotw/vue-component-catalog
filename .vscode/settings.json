@@ -6,4 +6,5 @@
   "stylelint.validate":["vue"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderWhitespace": "all",
+  "jest.jestCommandLine": "yarn test --",
 }
