@@ -33,6 +33,7 @@ describe('VCheckbox', () => {
   test('値が変更できること', async () => {
     const chechbox = wrapper.find('.v-checkbox__input');
     await chechbox.setValue(true);
+    // FIXME: valueがemitされない
     expect((wrapper.emitted() as any)['update:modelValue'][0][0]).toBe(true);
   });
 });

@@ -35,8 +35,6 @@ export default defineComponent({
     const model = computed({
       get: () => props.modelValue,
       set: (value: string[] | number[] | boolean[] | undefined) => {
-        console.log(value);
-
         context.emit('update:modelValue', value);
       },
     });
