@@ -17,5 +17,4 @@
     "types": ["vite/client", "@types/jest"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["**/*.stories.ts"]
 }
