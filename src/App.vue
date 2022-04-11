@@ -2,17 +2,27 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue';
-import VText from '@/components/form/VText.vue';
+import VSelect from '@/components/form/VSelect.vue';
 import { ref } from 'vue';
 
-const text = ref('テキスト');
+const item = ref([]);
+const list = ref([
+  { id: '001', name: 'りんご' },
+  { id: '002', name: 'みかん' },
+]);
 </script>
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <VText v-model="text" />
-  <p>{{ text }}</p>
+  <VSelect
+    v-model="item"
+    :items="list"
+    label-key="name"
+    value-key="id"
+    multiple
+  />
+  <p>{{ item }}</p>
 </template>
 
 <style>
