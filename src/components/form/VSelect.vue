@@ -31,7 +31,7 @@ export default defineComponent({
     },
     modelValue: {
       type: [String, Number, Array] as PropType<
-        string | number | string[] | number[] | undefined
+        string | number | string[] | undefined
       >,
       required: false,
       default: undefined,
@@ -41,7 +41,7 @@ export default defineComponent({
   setup(props, context) {
     const model = computed({
       get: () => props.modelValue,
-      set: (value: string | number | string[] | number[] | undefined) => {
+      set: (value: string | number | string[] | undefined) => {
         context.emit('update:modelValue', value);
       },
     });
