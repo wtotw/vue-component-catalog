@@ -27,7 +27,7 @@
     "@typescript-eslint/parser": "^5.18.0",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vue/test-utils": "^2.0.0-rc.19",
-    "babel-jest": "27",
+    "babel-jest": "26",
     "babel-loader": "^8.2.4",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
